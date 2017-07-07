@@ -1,0 +1,6 @@
+{
+	"require": {
+		"madbob/manydns": "dev-master"
+	},
+	"minimum-stability": "stable"
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <id>ddnsclient</id>
+    <name>DDNS Client</name>
+    <summary>Client for popular dynamic DNS providers</summary>
+    <description><![CDATA[Easy access to your home-hosted NextCloud instance: register to a dynamic DNS provider, and configure automatic updates of IP binding through this simple application.]]></description>
+    <licence>agpl</licence>
+    <author mail="bob@linux.it" >Roberto Guido</author>
+    <version>0.0.1</version>
+    <namespace>DDNSClient</namespace>
+    <category>tools</category>
+    <website>https://github.com/madbob/nextcloud-dyndns#readme</website>
+    <bugs>https://github.com/madbob/nextcloud-dyndns/issues</bugs>
+    <dependencies>
+        <nextcloud min-version="12" max-version="12"/>
+        <lib>curl</lib>
+    </dependencies>
+    <background-jobs>
+        <job>OCA\DDNSClient\BackgroundJobs\UpdateBindings</job>
+    </background-jobs>
+    <settings>
+        <admin>OCA\DDNSClient\Settings\Admin</admin>
+    </settings>
+</info>
